@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Noto+Serif+TC&display=swap&subset=latin-ext');
+
+#settings {
+    position: absolute;
+    bottom: 0.5vh;
+    left: 0.5vh;
+    font-size: 3vh;
+    color: var(--dark);
+    cursor: pointer;
+    transition: right 0.2s;
+}
+
+#abt {
+    position: absolute;
+    bottom: -100vh;
+    right: 120vw;
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50% 40%;
+    background: var(--dark);
+    font-family: 'Noto Serif TC', serif;
+    transition: all 0.5s cubic-bezier(0.87, -0.2, 0.19, 1.2);
+}
+
+#all-link,
+#year-link,
+#month-link {
+    position: absolute;
+    bottom: 42vh;
+    left: 45vh;
+    height: 14vh;
+    width: 2vh;
+    font-size: 1.5vh;
+    text-align: center;
+    color: var(--bright);
+    text-decoration: none;
+    background: none;
+}
+
+#year-link {
+    height: 11vh;
+}
+
+#month-link {
+    height: 8vh;
+}
+
+#day-link,
+#hour-link,
+#minute-link {
+    position: absolute;
+    bottom: 42vh;
+    left: 48vh;
+    height: 11vh;
+    font-size: 1.5vh;
+    width: 4vh;
+    text-align: left;
+    color: var(--bright);
+    text-decoration: none;
+    background: none;
+}
+
+#hour-link {
+    height: 8vh;
+}
+
+#minute-link {
+    height: 5vh;
+}
+
+#app {
+    background: var(--bright);
+}
+#time-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--dark);
+    overflow: hidden;
+    background: var(--bright);
+}
+
+#time-bar-container {
+    position: absolute;
+    top: 12vh;
+    left: 0;
+    right: 0;
+    height: 75vh;
+    overflow: hidden;
+}
+
+#title {
+    font-size: 10vh;
+    margin-left: 10vw;
+    margin-bottom: 4vh;
+    font-weight: 800;
+    font-family: 'Amatic SC', cursive;
+}
+
+
+#time-progress {
+    margin-left: 10vw;
+    margin-bottom: 1vh;
+    font-size: 2vh;
+    font-family: 'Noto Serif TC', serif;
+}
+
+#time-graph {
+    height: 2vh;
+    width: 80vw;
+    border: 2px solid var(--broder);
+    overflow: hidden;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+}
+
+#time-bar {
+    height: 2vh;
+    width: 0vw;
+    background: var(--dark);
+    transition: width 0.5s;
+}
+
+#one-time-bar{
+    position: absolute;
+    top: 30vh;
+}
