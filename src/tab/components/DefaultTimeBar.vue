@@ -1,6 +1,6 @@
 <template>
   <div id="default-container">
-    <div id="title">Enjoy 2020</div>
+    <div id="title">Enjoy {{ currentYear }}</div>
     <div id="default-time-bar">
       <year-container></year-container>
       <month-container></month-container>
@@ -20,6 +20,11 @@ import minuteContainer from './MinuteTimeBar';
 
 export default {
   name: 'DefaultTimeBar',
+  data() {
+    return {
+      currentYear: new Date().getFullYear(),
+    };
+  },
   components: {
     yearContainer,
     monthContainer,

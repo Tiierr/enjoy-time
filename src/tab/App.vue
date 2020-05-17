@@ -5,7 +5,7 @@
         <component v-if="show" :is="currentTabComponent" :id="currentID"></component>
       </div>
     </div>
-    <div id="abt" ref="abt">
+    <div id="abt" ref="abt" @click="fold">
       <div @click="changeCurrentTimeType('default')" id="all-link" :style="{ fontSize: fontSize('default') + 'vh' }">全</div>
       <div @click="changeCurrentTimeType('year')" id="year-link" :style="{ fontSize: fontSize('year') + 'vh' }">年</div>
       <div @click="changeCurrentTimeType('month')" id="month-link" :style="{ fontSize: fontSize('month') + 'vh' }">月</div>
@@ -13,7 +13,7 @@
       <div @click="changeCurrentTimeType('hour')" id="hour-link" :style="{ fontSize: fontSize('hour') + 'vh' }">时</div>
       <div @click="changeCurrentTimeType('minute')" id="minute-link" :style="{ fontSize: fontSize('minute') + 'vh' }">分</div>
     </div>
-    <div id="settings" ref="settings" @click="fold">⚙</div>
+    <div id="settings" v-if="!exp" ref="settings" @click="fold">⏱</div>
   </div>
 </template>
 
@@ -60,14 +60,10 @@ export default {
   methods: {
     fold() {
       if (this.exp) {
-        this.$refs.settings.style.left = '0.5vh';
-        this.$refs.settings.style.color = 'var(--dark)';
         this.$refs.abt.style.right = '120vw';
         this.$refs.abt.style.bottom = '-100vh';
         this.exp = false;
       } else {
-        this.$refs.settings.style.left = '14vh';
-        this.$refs.settings.style.color = 'var(--bright)';
         this.$refs.abt.style.right = 'calc(100vw - 20vh)';
         this.$refs.abt.style.bottom = '-42vh';
         this.exp = true;

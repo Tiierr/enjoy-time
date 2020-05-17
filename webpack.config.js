@@ -10,7 +10,6 @@ const config = {
   mode: process.env.NODE_ENV,
   context: __dirname + '/src',
   entry: {
-    background: './background.js',
     'tab/tab': './tab/tab.js',
   },
   output: {

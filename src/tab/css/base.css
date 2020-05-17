@@ -1,22 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Noto+Serif+TC&display=swap&subset=latin-ext');
+*,:after,:before {
+    box-sizing: border-box
+}
+
+body {
+    background: #222;
+    color: #222;
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#app {
+    background: var(--bright);
+}
+
+#body {
+    background: var(--bright);
+    color: var(--bright);
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
 
 #settings {
     position: absolute;
-    bottom: 0.5vh;
-    left: 0.5vh;
-    font-size: 3vh;
-    color: var(--dark);
-    cursor: pointer;
-    transition: right 0.2s;
+    bottom: 0.6vh;
+    left: 0.6vh;
+    font-size: 1.8vh;
 }
 
 #abt {
     position: absolute;
-    bottom: -100vh;
+    bottom: 100vh;
     right: 120vw;
-    height: 60vh;
-    width: 60vh;
-    border-radius: 50% 40%;
+    height: 58vh;
+    width: 120vh;
+    border-radius: 20% 23%;
     background: var(--dark);
     font-family: 'Noto Serif TC', serif;
     transition: all 0.5s cubic-bezier(0.87, -0.2, 0.19, 1.2);
@@ -26,15 +50,14 @@
 #year-link,
 #month-link {
     position: absolute;
-    bottom: 42vh;
-    left: 45vh;
+    bottom: 40vh;
+    left: 103vh;
     height: 14vh;
     width: 2vh;
     font-size: 1.5vh;
     text-align: center;
     color: var(--bright);
     text-decoration: none;
-    background: none;
 }
 
 #year-link {
@@ -49,8 +72,8 @@
 #hour-link,
 #minute-link {
     position: absolute;
-    bottom: 42vh;
-    left: 48vh;
+    bottom: 40vh;
+    left: 108vh;
     height: 11vh;
     font-size: 1.5vh;
     width: 4vh;
@@ -68,9 +91,6 @@
     height: 5vh;
 }
 
-#app {
-    background: var(--bright);
-}
 #time-container {
     position: absolute;
     top: 0;
