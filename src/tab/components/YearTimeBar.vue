@@ -31,7 +31,7 @@ export default {
       const now = new Date();
       const initDate = new Date(now.getFullYear(), now.getMonth());
       const spy = this.secondsPerYear(now.getFullYear());
-      return Math.round(((now - initDate) / spy) * 100) / 1000;
+      return Math.round(((now - initDate) / spy) * 100) / 100;
     },
     updateTimeBar() {
       // calculate percentage for year
